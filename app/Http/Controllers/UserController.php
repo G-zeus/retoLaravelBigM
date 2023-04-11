@@ -31,8 +31,8 @@ class UserController extends Controller
         try {
 
             $request->validate([
-                'name' => 'required',
-                'email' => 'unique:users|email',
+                'name' => 'required|max:75',
+                'email' => 'unique:users|email|max:50',
             ]);
 
             $user = User::create($request->all());
@@ -72,8 +72,8 @@ class UserController extends Controller
         try {
 
             $request->validate([
-                'name' => 'required',
-                'email' => 'unique:users|email',
+                'name' => 'required|max:75',
+                'email' => 'unique:users|email|max:50',
             ]);
 
 
