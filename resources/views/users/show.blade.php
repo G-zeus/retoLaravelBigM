@@ -25,5 +25,11 @@
                 {{ $user->email }}
             </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Rol:</strong>
+                {{ $user->roles->map(function($role){ return $role->name;}) }}
+            </div>
+        </div>
     </div>
 @endsection

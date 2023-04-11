@@ -39,6 +39,19 @@
                     <input class="form-control" name="email" type="email" placeholder="emali@xxx.com">
                 </div>
             </div>
+
+            <div class="col-xs-5 col-sm-5 col-md-5">
+                <div class="form-group ">
+                    <strong>Rol:</strong>
+                    <select class="form-control" name="role" >
+                        @foreach($roles as $role)
+
+                            <option value="{{$role->id}}">{{$role->name}}</option>
+                        @endforeach
+
+                    </select>
+                </div>
+            </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Crear</button>
             </div>

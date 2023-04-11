@@ -27,13 +27,15 @@
             <th>No</th>
             <th>Nombre</th>
             <th>Email</th>
+            <th>Rol</th>
             <th width="280px">Opciones</th>
         </tr>
         @foreach ($users as $key=>$user)
             <tr>
-                <td>{{ $key + 1}}</td>
+                <td>{{ $user->id}}</td>
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
+                <td>{{$user->roles->map(function($role){ return $role->name;}) }}</td>
                 <td>
                     <form action="{{ route('users.destroy',$user->id) }}" method="POST">
 
