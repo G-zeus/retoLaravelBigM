@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Agregar nuevo usuario</h2>
+                <h2>Agregar nuevo rol</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('users.index') }}"> Regresar</a>
+                <a class="btn btn-primary" href="{{ route('roles.index') }}"> Regresar</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         </div>
     @endif
 
-    <form action="{{ route('users.store') }}" method="POST">
+    <form action="{{ route('roles.store') }}" method="POST">
         @csrf
 
         <div class="row">
@@ -33,12 +33,12 @@
                     <input type="text" name="name" class="form-control" placeholder="Name">
                 </div>
             </div>
-            <div class="col-xs-5 col-sm-5 col-md-5">
-                <div class="form-group ">
-                    <strong>Email:</strong>
-                    <input class="form-control" name="email" type="email" placeholder="emali@xxx.com">
-                </div>
-            </div>
+{{--            <div class="col-xs-5 col-sm-5 col-md-5">--}}
+{{--                <div class="form-group ">--}}
+{{--                    <strong>Email:</strong>--}}
+{{--                    <input class="form-control" name="email" type="email" placeholder="emali@xxx.com">--}}
+{{--                </div>--}}
+{{--            </div>--}}
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Crear</button>
             </div>

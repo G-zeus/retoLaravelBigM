@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 
 Route::resource('users', \App\Http\Controllers\UserController::class);
+Route::resource('roles', \App\Http\Controllers\RoleController::class);
 
