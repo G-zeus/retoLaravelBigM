@@ -16,7 +16,6 @@ class RoleControllerTest extends TestCase
 
         $data = [
             'name' => $this->faker->name(),
-            'email' =>  $this->faker->email()
         ];
 
         $this->post('roles', $data)->assertSessionHas('success');
@@ -31,7 +30,6 @@ class RoleControllerTest extends TestCase
 
         $data = [
             'name' => $this->faker->name(),
-            'email' =>  $this->faker->email()
         ];
 
         $user = Role::factory()->create();
@@ -49,7 +47,6 @@ class RoleControllerTest extends TestCase
 
         $data = [
             'name' => $this->faker->name(),
-            'email' =>  $this->faker->email()
         ];
 
         $user = Role::factory()->create();
