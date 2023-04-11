@@ -35,7 +35,7 @@ class RoleController extends Controller
 
             $role = Role::create($request->all());
 
-            return redirect('roles')->with('success','Role creado correctamente');
+            return redirect('roles')->with('success','Rol creado correctamente');
         } catch (ValidationException $validationException) {
             return redirect('roles')->with('error',$validationException->getMessage());
 
@@ -76,7 +76,7 @@ class RoleController extends Controller
 
             $role->update($request->all());
 
-            return redirect('roles')->with('success','Role actualizado correctamente');
+            return redirect('roles')->with('success','Rol actualizado correctamente');
         } catch (ValidationException $validationException) {
             return redirect('roles')->with('error',$validationException->getMessage());
 
@@ -88,13 +88,16 @@ class RoleController extends Controller
         //
     }
 
-
+    /**
+     * @param Role $role
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function destroy(Role $role)
     {
         try {
 
             $role->delete();
-            return redirect('roles')->with('success','Role eliminado correctamente');
+            return redirect('roles')->with('success','Rol eliminado correctamente');
         }catch (\Exception $exception) {
 
             return redirect('roles')->with('error',$exception->getMessage());
